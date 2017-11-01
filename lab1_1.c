@@ -19,6 +19,15 @@ void set_stop_symb(char* model, int length, int* stop_symb){
 }
 
 
+int finding_stop(char symb, int *arr_of_stop, char* model){
+	for (int i = 0; i < strlen(arr_of_stop); i++){
+		if (model[i] == symb)
+			return arr_of_stop[i];
+	}
+	return strlen(model);
+}
+
+
 int main(){
 
 	char model[16] = {0};
